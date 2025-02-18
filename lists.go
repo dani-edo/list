@@ -10,6 +10,7 @@ func main() {
 	fmt.Println(productNames)
 	fmt.Println(productNames[0])
 
-	featurdPrices := prices[1:3] // slice index 1 to 2 (before 3)
-	fmt.Println(featurdPrices)
+	featurdPrices := prices[1:] // slice index 0 to 2 (before 3)
+	highlightedPrices := featurdPrices[:1]
+	fmt.Println(highlightedPrices)
 }
