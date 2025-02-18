@@ -10,9 +10,14 @@ func main() {
 	fmt.Println(productNames)
 	fmt.Println(productNames[0])
 
-	featurdPrices := prices[1:] // slice index 0 to 2 (before 3)
+	featurdPrices := prices[1:] // slice index 1 to the latest index
 	featurdPrices[1] = 2.00
 	highlightedPrices := featurdPrices[:1] // slice is just window of original array (still mutable)
 	fmt.Println(highlightedPrices)
 	fmt.Println(featurdPrices)
+	fmt.Println(len(highlightedPrices), cap(highlightedPrices)) // length and capacity
+
+	highlightedPrices = highlightedPrices[:3]
+	fmt.Println(highlightedPrices)
+	fmt.Println(len(highlightedPrices), cap(highlightedPrices))
 }
