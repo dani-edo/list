@@ -10,6 +10,10 @@ func main() {
 	prices = append(prices, 3.99) // append value in the array,then replace prices value with "prices ="
 	prices = prices[1:]           // remove first element
 	fmt.Println(prices)
+
+	discountPrices := []float64{101.77, 1.99, 2.99, 3.99}
+	prices = append(prices, discountPrices...)
+	fmt.Println(prices)
 }
 
 // func main() {
