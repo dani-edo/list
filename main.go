@@ -14,7 +14,7 @@ func main() {
 	userNames = append(userNames, "hello")
 
 	userNames[0] = "satu"
-	userNames[1] = "dua"
+	// userNames[1] = "dua"
 	// userNames[2] = "tiga"
 
 	fmt.Println(userNames)
@@ -27,4 +27,12 @@ func main() {
 	// fmt.Println(courseRatings)
 
 	courseRatings.output()
+
+	for index, value := range userNames { // for loop in slices
+		fmt.Println("slices -> index:", index, "value:", value)
+	}
+
+	for key, value := range courseRatings { // for loop in maps
+		fmt.Println("map -> key:", key, "value:", value)
+	}
 }
